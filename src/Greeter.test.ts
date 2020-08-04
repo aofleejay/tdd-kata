@@ -15,3 +15,11 @@ it('greet() trim input', () => {
 
   expect(message).toBe('Hello John.')
 })
+
+it('greet() capitalize name', () => {
+  const greeter = new Greeter()
+
+  const message = greeter.greet('john')
+
+  expect(message).toBe('Hello John.')
+})
