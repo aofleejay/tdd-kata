@@ -1,7 +1,9 @@
 class Greeter {
   private date: Date
-  constructor(date: Date = new Date()) {
+  private logger: Function
+  constructor(date: Date = new Date(), logger: Function = console.log) {
     this.date = date
+    this.logger = logger
   }
 
   greet(name: string): string {
@@ -22,7 +24,9 @@ class Greeter {
       greetingMessage = 'Hello'
     }
 
-    return `${greetingMessage} ${formattedName}.`
+    const greeting = `${greetingMessage} ${formattedName}.`
+    this.logger(greeting)
+    return greeting
   }
 }
 

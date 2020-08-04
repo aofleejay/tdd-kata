@@ -53,3 +53,14 @@ it('greet() say good night when the time is 22:00-06:00', () => {
 
   expect(message).toBe('Good night John.')
 })
+
+it('log when call greet()', () => {
+  const spyConsoleLog = jest.spyOn(console, 'log')
+  const dateTime = new Date('2020-08-04T06:00:00.000Z')
+  const greeter = new Greeter(dateTime, spyConsoleLog)
+
+  greeter.greet('john')
+
+  expect(console.log).toHaveBeenCalledTimes(1)
+  expect(console.log).toHaveBeenCalledWith('Hello John.')
+})
