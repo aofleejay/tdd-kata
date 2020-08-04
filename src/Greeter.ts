@@ -14,6 +14,8 @@ class Greeter {
     let greetingMessage = ''
     if (hour >= 6 && hour <= 12) {
       greetingMessage = 'Good morning'
+    } else if (hour >= 18 && hour < 22) {
+      greetingMessage = 'Good evening'
     } else {
       greetingMessage = 'Hello'
     }

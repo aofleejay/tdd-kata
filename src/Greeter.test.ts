@@ -32,3 +32,12 @@ it('greet() say good morning when the time is 6-12AM', () => {
 
   expect(message).toBe('Good morning John.')
 })
+
+it('greet() say good evening when the time is 18-22PM', () => {
+  const eveningDateTime = new Date('2020-08-04T11:00:00.000Z')
+  const greeter = new Greeter(eveningDateTime)
+
+  const message = greeter.greet('john')
+
+  expect(message).toBe('Good evening John.')
+})
