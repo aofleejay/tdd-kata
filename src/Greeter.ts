@@ -16,6 +16,8 @@ class Greeter {
       greetingMessage = 'Good morning'
     } else if (hour >= 18 && hour < 22) {
       greetingMessage = 'Good evening'
+    } else if ((hour >= 22 && hour <= 24) || (hour >= 0 && hour <= 6)) {
+      greetingMessage = 'Good night'
     } else {
       greetingMessage = 'Hello'
     }
