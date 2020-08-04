@@ -24,7 +24,7 @@ it('greet() capitalize name', () => {
   expect(message).toBe('Hello John.')
 })
 
-it('greet() say good morning when the time is 6-12AM', () => {
+it('greet() say good morning when the time is 06:00-12:00', () => {
   const morningDateTime = new Date('2020-08-04T23:00:00.000Z')
   const greeter = new Greeter(morningDateTime)
 
@@ -33,7 +33,7 @@ it('greet() say good morning when the time is 6-12AM', () => {
   expect(message).toBe('Good morning John.')
 })
 
-it('greet() say good evening when the time is 18-22PM', () => {
+it('greet() say good evening when the time is 18:00-22:00', () => {
   const eveningDateTime = new Date('2020-08-04T11:00:00.000Z')
   const greeter = new Greeter(eveningDateTime)
 
