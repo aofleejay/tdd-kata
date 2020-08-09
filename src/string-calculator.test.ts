@@ -1,4 +1,4 @@
-import { stringCalculator } from './stringCalculator'
+import { stringCalculator } from './string-calculator'
 
 it('an empty delimited string returns zero', () => {
   const delimitedString = ''
