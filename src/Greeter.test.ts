@@ -1,4 +1,4 @@
-import { Greeter } from './Greeter'
+import { Greeter } from './greeter'
 
 it('say hello when call greet()', () => {
   const dateTime = new Date('2020-08-04T06:00:00.000Z')

@@ -1,4 +1,4 @@
-import { PrimeFactors } from './PrimeFactors'
+import { PrimeFactors } from './prime-factors'
 
 it.each`
   target | expectedFactors
