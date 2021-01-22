@@ -2,6 +2,7 @@ class Greeter {
   private date: Date
   private logger: Function
   constructor(date: Date = new Date(), logger: Function = console.log) {
+    console.log(date)
     this.date = date
     this.logger = logger
   }
