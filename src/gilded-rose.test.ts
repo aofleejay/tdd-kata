@@ -41,7 +41,7 @@ describe('Gilded Rose', function () {
     expect(items[0].sellIn).toBe(1)
   })
 
-  it('Backstage passes', function () {
+  it('Backstage passes increase quality when date pass', function () {
     const gildedRose = new GildedRose([
       new Item('Backstage passes to a TAFKAL80ETC concert', 11, 1),
     ])
@@ -49,7 +49,7 @@ describe('Gilded Rose', function () {
     expect(items[0].quality).toBe(2)
   })
 
-  it('Backstage passes 10 day left', function () {
+  it('Backstage passes increase quality by 2 when 10 day left', function () {
     const gildedRose = new GildedRose([
       new Item('Backstage passes to a TAFKAL80ETC concert', 10, 1),
     ])
@@ -57,7 +57,7 @@ describe('Gilded Rose', function () {
     expect(items[0].quality).toBe(3)
   })
 
-  it('Backstage passes 5 day left', function () {
+  it('Backstage passes increase quality by 3 when 5 day left', function () {
     const gildedRose = new GildedRose([
       new Item('Backstage passes to a TAFKAL80ETC concert', 5, 1),
     ])
@@ -65,7 +65,7 @@ describe('Gilded Rose', function () {
     expect(items[0].quality).toBe(4)
   })
 
-  it('Backstage passes 0 day left', function () {
+  it('Backstage passes decrease quality to 0 when sellin passed', function () {
     const gildedRose = new GildedRose([
       new Item('Backstage passes to a TAFKAL80ETC concert', 0, 2),
     ])
